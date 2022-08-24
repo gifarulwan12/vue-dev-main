@@ -61,6 +61,13 @@ const routes = [
     meta: { requiresAuth: true }
   },
   {
+    path: '/EditUser',
+    name: 'EditUser',
+    component: () =>
+        import ('../views/user/EditUser.vue'),
+    meta: { requiresAuth: true }
+},
+  {
     path: '/membership',
     name: 'membership',
     component: () => import('../views/member/MemberView.vue'),
@@ -72,6 +79,19 @@ const routes = [
     component: () => import('../views/member/MemberDetail.vue'),
     meta: { requiresAuth: true }
   },
+  {
+    path: '/membership',
+    name: 'membershipdetail',
+    component: () => import('../views/member/MemberDetail.vue'),
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/EditMembership',
+    name: 'EditMembership',
+    component: () =>
+        import ('../views/member/EditMembership.vue'),
+    meta: { requiresAuth: true }
+},
   {
     path: '/content',
     name: 'content',
@@ -92,11 +112,11 @@ const routes = [
     meta: { requiresAuth: true }
     },
     {
-        path: '/offlineClass/addOfflineClass',
-        name: 'addOfflineClass',
-        component: () =>
-            import ('../views/offlineClass/addOfflineClass.vue'),
-        meta: { requiresAuth: true }
+    path: '/offlineClass/addOfflineClass',
+    name: 'addOfflineClass',
+    component: () =>
+    import ('../views/offlineClass/addOfflineClass.vue'),
+    meta: { requiresAuth: true }
     },
     {
         path: '/offlineClass/Categories/:id',

@@ -7,14 +7,15 @@
           <NavbarAdmin />
         </div>
         <div>
-          <div class="mx-auto m-5">
-            <h1 class="text-5xl font-semibold m-5">Category</h1>
+          <div class="mx-auto py-8">
+            <h1 class="text-5xl font-semibold mb-8 my-0">Offline Classes</h1>
+            <h1 class="text-3xl font-semibold mb-8 ml-5">Category</h1>
             <!-- card -->
             <div class="flex">
               <div
                 v-for="category in listCategory"
                 :key="category.id"
-                class="grid place-content-start place-items-center mx-5"
+                class="grid place-content-start place-items-center mx-5 "
               >
                 <router-link
                   :to="{ name: 'categories', params: { id: category.id } }"
@@ -44,8 +45,7 @@
                 </div>
                 <button
                   type="button"
-                  class="p-2 ml-2 text-sm font-medium text-white bg-red-600 rounded-lg border border-red-600"
-                >
+                  class="p-2 ml-2 text-sm font-medium text-white bg-red-600 rounded-lg border border-red-600">
                   Search
                 </button>
               </div>
@@ -56,8 +56,7 @@
                 <button
                   @click="(dropcategory = !dropcategory), (dropclass = false)"
                   class="flex text-black w-60 bg-white border border-red-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center items-center space-x-40"
-                  type="button"
-                >
+                  type="button">
                   <p>ALL</p>
                   <svg
                     v-if="dropcategory"

@@ -44,28 +44,27 @@
                                             Status Membership
                                         </th>
                                         <th scope="col" class="border-y border-r border-black px-6 py-3">
-                                            
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="(member, index) in membership" :key="index" class="border border-black hover:bg-red-100">
+                                    <tr v-for="(membership, index) in membership" :key="index" class="border border-black hover:bg-red-100">
                                         <td class="border-y border-l border-black px-6 py-2">
-                                            <router-link :to="{name: 'membershipdetail', params: {id: member.id} }">
-                                            ID-00{{ member.id }}
+                                            <router-link :to="{name: 'membershipdetail', params: {id: membership.id} }">
+                                            ID-00{{ membership.id }}
                                             </router-link>
                                         </td>
                                         <td class="border-y border-black px-6 py-2">
-                                            {{ member.name }}
+                                            {{ membership.name }}
                                         </td>
                                         <td class="border-y border-black px-6 py-2">
-                                            {{ member.contact }}
+                                            {{ membership.contact }}
                                         </td>
                                         <td class="border-y border-black px-6 py-2">
-                                            {{ member.duration }} Month
+                                            {{ membership.duration }} Month
                                         </td>
                                         <td class="border-y  text-center border-black px-6 py-2">
-                                            <div v-if="member.status == false">
+                                            <div v-if="membership.status == false">
                                             <p class="text-red-600">Non Active</p>
                                             </div>
                                             <div v-else>
@@ -113,7 +112,7 @@ export default {
         getMembership() {
             this.$store.dispatch('getMembership')
         }
-    },
+    }
 }
 </script>
 

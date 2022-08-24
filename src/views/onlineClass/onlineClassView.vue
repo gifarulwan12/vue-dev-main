@@ -8,7 +8,8 @@
         </div>
         <div>
           <div class="mx-auto py-8">
-            <h1 class="text-5xl font-semibold mb-8">Category</h1>
+            <h1 class="text-5xl font-semibold mb-8 my-0">Online Classes</h1>
+            <h1 class="text-3xl font-semibold mb-8 ml-5">Category</h1>
             <!-- card -->
             <div class="flex">
               <div

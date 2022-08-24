@@ -1,6 +1,6 @@
 <template>
   <div class="w-64 ml-4 mr-2 mt-4" aria-label="Sidebar">
-    <div class="py-4 px-3 bg-white border-r-2 border-gray-200">
+    <div class="py-3 px-2 bg-white border-r-2 border-gray-200">
       <router-link to="/dashboard" class="flex items-center mb-10">
         <img src="@/assets/logo.png" alt="" />
       </router-link>

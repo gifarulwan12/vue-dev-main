@@ -55,13 +55,13 @@
                                             {{ user.name }}
                                         </td>
                                         <td class="border-y border-black px-6 py-2">
-                                            {{ user.number }}
+                                            {{ user.contact }}
                                         </td>
                                         <td class="border-y border-black px-6 py-2">
                                             {{ user.email }}
                                         </td>
                                         <td class="border-y  text-center border-r border-black px-6 py-2">
-                                            -
+                                            {{ user.class }}
                                         </td>
                                     </tr>
                                 </tbody>

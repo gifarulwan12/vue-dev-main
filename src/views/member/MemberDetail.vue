@@ -35,7 +35,7 @@
                 <div>
                     <div class="m-5 max-w-xl border border-4 border-red-600 p-4">
                         <div>
-                            <p class="text-black text-3xl font-bold text-start">{{ member.name }}</p>
+                            <p class="text-black text-3xl font-bold text-start">{{ membership.name }}</p>
                             <div class="relative overflow-x-auto my-3 ">
                                 <table class="w-full text-left font-semibold">
                                     <tbody class="text-xl text-gray-400 ">
@@ -61,32 +61,33 @@
                                     </td>
                                     <td class="text-black">
                                         <tr class=" ">
-                                            ID-00{{ member.id }}
+                                            -
+                                        </tr>
+                                        <tr class=" ">
+                                            IDMembers-00{{membership.id}}
                                         </tr>
                                         <tr class="">
-                                            {{member.name}}
+                                            {{membership.contact}}
                                         </tr>
                                         <tr class="">
-                                            {{ member.number }}
+                                           {{membership.email}}
                                         </tr>
                                         <tr class="">
-                                            {{ member.email }}
+                                            Yes {{membership.members}}
                                         </tr>
                                         <tr class="">
-                                            {{member.status}}
+                                            {{membership.exp}}
                                         </tr>
-                                        <tr class="">
-                                            {{Exp}}
-                                        </tr>
+                                        
                                     </td>
                                 </tbody>
                             </table>
                             </div>
                         </div>
                     </div>
-                    <router-link to="/member/EditMembership">
+                    <router-link to="/EditMembership">
                 <button
-                  class="inline-flex bg-red-600 text-white rounded-md gap-1 h-14 w-40 items-center px-1"
+                  class="inline-flex bg-red-600 text-white rounded-md gap-1 ml-5 h-14 w-40 items-center px-1"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -129,53 +130,7 @@
                                             <p class="px-1.5">21.00</p>
                                         </td>
                                         <td class="border-y border-black px-3 py-2">
-                                            27/02/2022
-                                        </td>
-                                        <td class="border-y border-r border-black px-9 py-2">
-                                            Offline
-                                        </td>
-                                    </tr>
-                                    <tr class="border border-black">
-                                        <td class="border-y border-l border-black px-3 py-2">
-                                            Cardio
-                                        </td>
-                                        <td class="border-y border-black py-2">
-                                            Body Combat
-                                        </td>
-                                        <td class="border-y border-black px-3 py-2">
-                                            Trainer Irwan
-                                        </td>
-                                        <td class="flex border-y border-black px-3 py-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                            <p class="px-1.5">21.00</p>
-                                        </td>
-                                        <td class="border-y border-black px-3 py-2">
-                                            27/02/2022
-                                        </td>
-                                        <td class="border-y border-r border-black px-9 py-2">
-                                            Offline
-                                        </td>
-                                    </tr>
-                                    <tr class="border border-black">
-                                        <td class="border-y border-l border-black px-3 py-2">
-                                            Cardio
-                                        </td>
-                                        <td class="border-y border-black py-2">
-                                            Body Combat
-                                        </td>
-                                        <td class="border-y border-black px-3 py-2">
-                                            Trainer Irwan
-                                        </td>
-                                        <td class="flex border-y border-black px-3 py-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                            <p class="px-1.5">21.00</p>
-                                        </td>
-                                        <td class="border-y border-black px-3 py-2">
-                                            27/02/2022
+                                            22/08/2022
                                         </td>
                                         <td class="border-y border-r border-black px-9 py-2">
                                             Offline
@@ -199,21 +154,22 @@ export default {
     components: { SideBar, NavbarAdmin },
     data() {
         return {
-        member: [],
+        membership: [],
         }
     },
     mounted() {
       axios
-        .get(`https://62d457765112e98e484e3952.mockapi.io/users/${this.$route.params.id}`)
-        .then((response) => {this.member = response.data
+        .get(`https://6303a9c20de3cd918b3b8fee.mockapi.io/membership/${this.$route.params.id}`)
+        .then((response) => {this.membership = response.data
         })
         .catch((error) => {console.log(error)
         })
+
     },
     computed: {
         detail() {
-            return this.member.find(
-                (member) => member.id === this.$route.params.id
+            return this.membership.find(
+                (membership) => membership.id === this.$route.params.id
             )
         }
     }

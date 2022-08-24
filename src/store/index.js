@@ -41,7 +41,7 @@ export default new Vuex.Store({
   actions: {
     getUsers(store) {
       axios
-        .get(`https://62d457765112e98e484e3952.mockapi.io/users?p=1&l=10`)
+        .get(`https://6303a9c20de3cd918b3b8fee.mockapi.io/user`)
         .then((response) => {store.commit('setUsers', response.data)
         })
         .catch((error) => {console.log(error)
@@ -57,7 +57,7 @@ export default new Vuex.Store({
     },
     getMembership(store) {
       axios
-        .get(`https://62d457765112e98e484e3952.mockapi.io/membership`)
+        .get(`https://6303a9c20de3cd918b3b8fee.mockapi.io/membership`)
         .then((response) => {store.commit('setMembership', response.data)
         })
         .catch((error) => {console.log(error)

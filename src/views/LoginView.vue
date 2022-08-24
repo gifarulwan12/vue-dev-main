@@ -2,7 +2,7 @@
 <div class="bg-cover h-screen bg-center ..." :style="{backgroundImage:'url(https://s3-alpha-sig.figma.com/img/04d6/2ff9/8a262add915d06e212b0197561135fd5?Expires=1658102400&Signature=KImt008MM9tHQskRazPRhTv9Q1-cwyT5UdcXHaMwuUnzMliiB5YSBcXMDy1yR~owkVkdRGjqIHRw4Y9mKNWfhdIwpcxHFdIHkCBhJKZPwf1NKbeTo7-TxNepqnLMtkRJZ3gmSszKLn2vOS1gHEcz44H-ncDCPy6OL7LGQnGPsq~XoFyFSY8iYXJGM8lkILRLene38ulaV9Q-4vq~fXzFyISr0wE55j9AxIHny2dRgP0Dv5nagdJljQhEUpTlrJecGPrcA-Bxr53gkqfpxDF05WtR95C0DQ0tkGsSFITDn-q9lavzDu31FhCNy-BQompBymU~8NjwJifiaBhC4FfqkQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)'}">
     <div class="grid grid-cols-2 gap-2 h-screen ">
         <div class="flex items-center">
-            <p class="uppercase text-8xl text-white font-black text-start pl-5">get ready to work</p>
+            <p class="uppercase text-8xl text-black font-black text-start pl-5">get ready to work</p>
         </div>
         <div class="flex items-center ">
             <div class=" mx-auto bg-white rounded-xl border border-gray-200 shadow-md p-5 py-10">
