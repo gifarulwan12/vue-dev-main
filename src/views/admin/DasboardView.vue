@@ -40,7 +40,7 @@
         </svg>
       </div>
       <div class="px-4 text-gray-700">
-        <h3 class="text-sm tracking-wider">Total Users</h3>
+        <h3 class="text-sm tracking-wider">Total </h3>
         <p class="text-3xl">8 Users</p>
       </div>
     </div>
